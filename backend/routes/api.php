@@ -12,3 +12,5 @@ return response()->json([
 Route::get('/personas', [PersonaController::class, 'index']);
 Route::get('/personas/{id}', [PersonaController::class, 'show'])
  ->whereNumber('id');
+
+ Route::post('/personas', [PersonaController::class, 'store']);
