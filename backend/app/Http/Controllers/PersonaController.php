@@ -49,4 +49,11 @@ class PersonaController extends Controller
  $persona->save();
  return response()->json($persona, 200);
  }
+
+ public function destroy(int $id)
+ {
+ $persona = Persona::findOrFail($id);
+ $persona->delete();
+ return response()->noContent();
+ 
 }

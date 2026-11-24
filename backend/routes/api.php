@@ -16,3 +16,6 @@ Route::get('/personas/{id}', [PersonaController::class, 'show'])
  Route::post('/personas', [PersonaController::class, 'store']);
  Route::put('/personas/{id}', [PersonaController::class, 'update'])
  ->whereNumber('id');
+
+ Route::delete('/personas/{id}', [PersonaController::class, 'destroy'])
+ ->whereNumber('id');
